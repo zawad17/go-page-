@@ -1,0 +1,38 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 2em;
+    background: #f9f9f9;
+}
+nav a, nav span {
+    margin-right: 1em;
+    text-decoration: none;
+    color: #333;
+}
+nav {
+    margin-bottom: 2em;
+}
+h1 {
+    color: #405d9b;
+}
+ul {
+    list-style: none;
+    padding: 0;
+}
+li {
+    margin: 0.5em 0;
+}
+form label {
+    display: block;
+    margin-bottom: 0.5em;
+}
+button {
+    background: #405d9b;
+    color: #fff;
+    border: none;
+    padding: 0.5em 1em;
+    cursor: pointer;
+    border-radius: 3px;
+}
+button:hover {
+    background: #2a3f6b;
+}

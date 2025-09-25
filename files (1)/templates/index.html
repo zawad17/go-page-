@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Go E-Commerce</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <nav>
+        <a href="/">Home</a>
+        {{if .Username}}
+            <span>Welcome, {{.Username}}</span>
+            <a href="/cart">Cart</a>
+            <a href="/logout">Logout</a>
+        {{else}}
+            <a href="/login">Login</a>
+            <a href="/signup">Sign Up</a>
+        {{end}}
+    </nav>
+    <h1>Products</h1>
+    <ul>
+    {{range .Products}}
+        <li>
+            <a href="/product?id={{.ID}}">{{.Name}} - ${{.Price}}</a>
+        </li>
+    {{end}}
+    </ul>
+</body>
+</html>

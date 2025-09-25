@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Your Cart - Go E-Commerce</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <nav>
+        <a href="/">Home</a>
+        <a href="/logout">Logout</a>
+    </nav>
+    <h1>Your Cart</h1>
+    {{if .Items}}
+    <ul>
+    {{range .Items}}
+        <li>{{.Name}} - ${{.Price}}</li>
+    {{end}}
+    </ul>
+    {{else}}
+    <p>Your cart is empty.</p>
+    {{end}}
+</body>
+</html>

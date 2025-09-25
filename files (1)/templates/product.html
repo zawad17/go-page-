@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{.Name}} - Go E-Commerce</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <nav>
+        <a href="/">Home</a>
+        {{if .Username}}
+            <a href="/cart">Cart</a>
+            <a href="/logout">Logout</a>
+        {{else}}
+            <a href="/login">Login</a>
+            <a href="/signup">Sign Up</a>
+        {{end}}
+    </nav>
+    <h1>{{.Name}}</h1>
+    <p>Price: ${{.Price}}</p>
+    <p>{{.Description}}</p>
+    {{if .Username}}
+        <form method="POST">
+            <button type="submit">Add to Cart</button>
+        </form>
+    {{else}}
+        <p><a href="/login">Login</a> to add to cart</p>
+    {{end}}
+</body>
+</html>

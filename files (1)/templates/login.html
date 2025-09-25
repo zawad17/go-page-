@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login - Go E-Commerce</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <nav>
+        <a href="/">Home</a>
+        <a href="/signup">Sign Up</a>
+    </nav>
+    <h1>Login</h1>
+    {{if .}}
+    <p style="color:red;">{{.}}</p>
+    {{end}}
+    <form method="POST" action="/login">
+        <label>Username: <input name="username"></label><br>
+        <label>Password: <input name="password" type="password"></label><br>
+        <button type="submit">Login</button>
+    </form>
+</body>
+</html>
